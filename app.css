@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "DM Sans Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 1000;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@latest/latin-wght-normal.woff2)
+        format("woff2-variations");
+}
+
+:root {
+    --font-sans: "DM Sans Variable";
+}
+
+@import "tailwindcss" source(none);
+@source "./app/Views/**/*.php";
+@source "./public/index.php";
+@plugin "daisyui" {
+    themes: cupcake --default;
+}
+
+@theme {
+    --font-sans: var(--font-sans);
+}
