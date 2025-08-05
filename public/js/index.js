@@ -23,7 +23,7 @@ $(document).ready(function () {
       method: "GET",
       dataType: "json",
       success: function (data) {
-        $("#edit_contact_name").val(data.notes);
+        $("#edit_contact_name").val(data.name);
         $("#edit_contact_number").val(data.number);
         $("#edit_contact_notes").text(data.notes);
         $("#edit_contact_id").val(id);

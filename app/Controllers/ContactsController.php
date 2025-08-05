@@ -59,9 +59,9 @@ class ContactsController
     }
     public static function edit()
     {
-        $name = $_POST["contact_name"] ?? "";
-        $number = $_POST["contact_number"] ?? "";
-        $notes = $_POST["contact_notes"] ?? "";
+        $name = $_POST["edit_contact_name"] ?? "";
+        $number = $_POST["edit_contact_number"] ?? "";
+        $notes = $_POST["edit_contact_notes"] ?? "";
         $id = $_POST["edit_contact_id"] ?? "";
 
         if (!empty($name) and !empty($number) and !empty($notes)) {
@@ -73,7 +73,6 @@ class ContactsController
         } else {
             Flash::Error("Todos los campos son necesarios");
         }
-        echo json_encode($_POST);
         header("Location: /");
         exit();
     }

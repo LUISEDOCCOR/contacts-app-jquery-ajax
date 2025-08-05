@@ -77,6 +77,7 @@
                         class="cursor-pointer bg-red-400 aspect-square flex justify-center
                         items-center rounded-md hover:opacity-75 transition-opacity w-9
                         text-lg xl:text-xl xl:w-12"
+                        aria-label="delete contact"
                     >
                         <i class="fa-solid fa-trash"></i>
                     </a>
@@ -85,6 +86,7 @@
                         items-center rounded-md hover:opacity-75 transition-opacity w-9
                         text-lg xl:text-xl xl:w-12"
                         data-id="<?= $contact["id"] ?>"
+                        aria-label="show more info"
                     >
                         <i class="fa-solid fa-folder-open"></i>
                     </button>
@@ -93,6 +95,7 @@
                         items-center rounded-md hover:opacity-75 transition-opacity w-9
                         text-lg xl:text-xl xl:w-12"
                         data-id="<?= $contact["id"] ?>"
+                        aria-label="edit contact"
 
                     >
                         <i class="fa-solid fa-pencil"></i>
@@ -126,7 +129,7 @@
                         type="text"
                         placeholder="Ingresa el nombre"
                         class="px-4 w-full py-2 border border-neutral-400 rounded-md"
-                        name="contact_name"
+                        name="edit_contact_name"
                         id="edit_contact_name"
                     >
                 </label>
@@ -136,14 +139,14 @@
                         type="tel"
                         placeholder="Ingresa el número"
                         class="px-4 w-full py-2 border border-neutral-400 rounded-md"
-                        name="contact_number"
+                        name="edit_contact_number"
                         id="edit_contact_number"
                     >
                 </label>
                 <label for="edit_contact_notes" class="space-y-2 col-span-1 xl:col-span-2">
                     <span class="font-semibold">Notas</span>
                     <textarea
-                        name="contact_notes"
+                        name="edit_contact_notes"
                         id="edit_contact_notes"
                         class="px-4 w-full py-2 border border-neutral-400
                         rounded-md"
